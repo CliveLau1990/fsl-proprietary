@@ -22,6 +22,14 @@ ifeq ($(BOARD_HAVE_USB_CAMERA),true)
 LOCAL_SRC_FILES := media_profiles_480p.xml
 endif
 
+ifeq ($(BOARD_SOC_TYPE),IMX8MQ)
+LOCAL_SRC_FILES :=  media_profiles_8mq.xml
+endif
+
+ifeq ($(BOARD_SOC_TYPE),IMX8Q)
+LOCAL_SRC_FILES :=  media_profiles_8dq.xml
+endif
+
 else
 ifeq ($(BOARD_SOC_TYPE),IMX8DQ)
 LOCAL_SRC_FILES :=  media_profiles_8dq.xml

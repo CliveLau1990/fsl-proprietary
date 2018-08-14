@@ -22,6 +22,42 @@
         <Setting name="supports-secure-with-non-secure-codec" value="false" />
     </Settings>
     <Decoders>
+        <MediaCodec name="OMX.Freescale.std.video_decoder.avc.v3.hw-based" type="video/avc" >
+            <Quirk name="requires-allocate-on-output-ports"/>
+            <Limit name="size" min="64x64" max="4096x2160" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1" max="1036800" />
+            <Limit name="bitrate" range="1-50000000" />
+            <Limit name="concurrent-instances" max="32" />
+        </MediaCodec>
+        <MediaCodec name="OMX.Freescale.std.video_decoder.hevc.hw-based" type="video/hevc" >
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Limit name="size" min="144x144" max="4096x2160" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1" max="2073600" />
+            <Limit name="bitrate" range="1-100000000"/>
+            <Limit name="concurrent-instances" max="32" />
+        </MediaCodec>
+        <MediaCodec name="OMX.Freescale.std.video_decoder.mpeg4.hw-based" type="video/mp4v-es" >
+            <Quirk name="requires-allocate-on-output-ports"/>
+            <Limit name="size" min="64x64" max="1920x1088" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-40000000" />
+            <Limit name="concurrent-instances" max="32" />
+        </MediaCodec>
+        <MediaCodec name="OMX.Freescale.std.video_decoder.mpeg2.hw-based" type="video/mpeg2" >
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Limit name="size" min="64x64" max="1920x1088" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-20000000"/>
+            <Limit name="concurrent-instances" max="32" />
+        </MediaCodec>
         <MediaCodec name="OMX.Freescale.std.video_decoder.wmv.sw-based" type="video/x-wmv" >
             <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" min="64x64" max="1920x1088" />

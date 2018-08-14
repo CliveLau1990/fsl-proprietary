@@ -13,7 +13,7 @@ LOCAL_SHARED_LIBRARIES := libutils libc liblog libg2d
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)
 
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include/ device/fsl-proprietary/include/
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include/ $(FSL_PROPRIETARY_PATH)/fsl-proprietary/include/
 
 LOCAL_MODULE := g2d_test
 LOCAL_LD_FLAGS += -nostartfiles
